@@ -3,87 +3,168 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flipkart made it by Aryan - Big Sale</title>
+    <meta
+      name="description"
+      content="Flipkart Big Sale by Aryan featuring top products in electronics and fashion"
+    />
+    <meta
+      name="keywords"
+      content="Flipkart, electronics, fashion, sale, buy now, best deals, Aryan Gupta"
+    />
+    <title>Flipkart Big Sale by Aryan - Home</title>
     <style>
-      /* Global Styles */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f5f5;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      /* Header Styles */
       header {
         background-color: #2874f0;
         color: white;
-        padding: 10px 0;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
-      header .logo {
-        font-size: 24px;
+      .logo {
+        font-size: 28px;
         font-weight: bold;
-        display: inline-block;
-        padding: 0 20px;
+        padding-left: 20px;
       }
 
       .search-bar {
-        display: inline-block;
+        display: flex;
+        align-items: center;
         width: 50%;
-        margin-left: 50px;
       }
 
       .search-bar input {
-        width: 80%;
+        width: 85%;
         padding: 10px;
-        font-size: 16px;
         border-radius: 4px;
         border: none;
+        font-size: 16px;
+        outline: none;
       }
 
       .search-bar button {
         padding: 10px 20px;
         background-color: #ff4081;
-        border: none;
         color: white;
         font-size: 16px;
+        border-radius: 4px;
+        border: none;
         cursor: pointer;
+        margin-left: 5px;
       }
-
-      /* Navigation Bar */
       nav {
         display: flex;
         justify-content: center;
         background-color: #1565c0;
-        padding: 10px;
+        padding: 15px;
       }
 
       nav a {
-        margin: 0 15px;
+        margin: 0 20px;
         font-size: 18px;
         color: white;
+        transition: color 0.3s ease;
       }
 
       nav a:hover {
-        text-decoration: underline;
+        color: #ff4081;
       }
-
-      /* Banner */
       .banner {
-        margin-top: 10px;
+        margin: 20px 0;
       }
 
       .banner img {
         width: 100%;
         max-height: 400px;
         object-fit: cover;
+        border-radius: 10px;
+      }
+      .product {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        width: 250px;
+        margin: 20px;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
+      .product:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .product h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .product p {
+        color: #666;
+      }
+
+      .price {
+        color: #2874f0;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      .product a button {
+        padding: 10px 20px;
+        background-color: magenta;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 15px;
+      }
+
+      .product a button:hover {
+        background-color: #ff4081;
+      }
+      footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 30px;
+        margin-top: 20px;
+      }
+
+      footer p {
+        font-size: 16px;
+        margin: 0;
+      }
+      @media (max-width: 768px) {
+        .search-bar {
+          width: 100%;
+          margin-left: 0;
+        }
+
+        .search-bar input {
+          width: 70%;
+        }
+
+        .products {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .product {
+          width: 100%;
+        }
+
+        nav {
+          flex-direction: column;
+        }
+
+        nav a {
+          margin: 10px 0;
+        }
+      }
       /* Main Content */
       main {
         padding: 20px;
@@ -136,19 +217,10 @@
         font-weight: bold;
       }
 
-  
-
-      /* Footer */
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 20px;
-      }
     </style>
   </head>
   <body>
-    <!-- Header -->
+    <!-- Modified Header -->
     <header>
       <div class="logo">Flipkart By Mr.Aryan Gupta</div>
       <div class="search-bar">
@@ -156,16 +228,16 @@
           type="text"
           placeholder="Search from aryan website products, brands and more..."
         />
-        <a href="https://poki.com/en/g/dinosaur-game" style="text-decoration: none;"></a>
-        <button style="all: unset; padding: 10px 20px; background-color:magenta; color: white; border: none; cursor: pointer;">
-          Search Now
-        </button>
+        <button>Search Now</button>
       </div>
     </header>
 
+    <!-- Modified Navigation Bar -->
     <!-- Navigation Bar -->
     <nav>
-      <a href="https://www.flipkart.com/big-billion-days-store?param=21881">Home</a>
+      <a href="https://www.flipkart.com/big-billion-days-store?param=21881"
+        >Home</a
+      >
       <a
         href="https://www.flipkart.com/search?q=electronics&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off"
         >Electronics</a
@@ -188,10 +260,11 @@
       >
     </nav>
 
-    <!-- Banner Image -->
+    <!-- Modified Banner -->
     <div class="banner">
       <img
         src="https://storiesflistgv2.blob.core.windows.net/stories/2020/10/BBDNewsUpdate_FKS_v1.jpg"
+        alt="Big Billion Day Sale Banner"
       />
     </div>
 
@@ -199,21 +272,32 @@
     <main>
       <!-- Product Category 1 -->
       <div class="product-category">
-        <h2 style="text-align: center;">Featured Electronics</h2>
+        <h2 style="text-align: center">Featured Electronics</h2>
         <div class="products">
           <div class="product">
             <img
               src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/k/l/l/-original-imagtc5fz9spysyk.jpeg?q=70"
             />
-            <h3>Apple iPhone 15 </h3>
+            <h3>Apple iPhone 15</h3>
             <p>(Blue, 128 GB)</p>
             <p class="price">₹55,749</p>
-            <a href="https://www.flipkart.com/apple-iphone-15-blue-128-gb/p/itmbf14ef54f645d?pid=MOBGTAGPAQNVFZZY&lid=LSTMOBGTAGPAQNVFZZY7RHDU7&marketplace=FLIPKART&q=apple+mobiles&store=tyy%2F4io&spotlightTagId=BestsellerId_tyy%2F4io&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_5_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_5_na_na_ps&fm=search-autosuggest&iid=7237681a-32b1-48b4-9de6-879e74030de3.MOBGTAGPAQNVFZZY.SEARCH&ppt=sp&ppn=sp&ssid=j7afqx320w0000001727554174329&qH=cb603b9543d774e1" style="text-decoration: none;">
-              <button style="all: unset; padding: 10px 20px; background-color:magenta; color: white; border: none; cursor: pointer;">
+            <a
+              href="https://www.flipkart.com/apple-iphone-15-blue-128-gb/p/itmbf14ef54f645d?pid=MOBGTAGPAQNVFZZY&lid=LSTMOBGTAGPAQNVFZZY7RHDU7&marketplace=FLIPKART&q=apple+mobiles&store=tyy%2F4io&spotlightTagId=BestsellerId_tyy%2F4io&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_5_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_5_na_na_ps&fm=search-autosuggest&iid=7237681a-32b1-48b4-9de6-879e74030de3.MOBGTAGPAQNVFZZY.SEARCH&ppt=sp&ppn=sp&ssid=j7afqx320w0000001727554174329&qH=cb603b9543d774e1"
+              style="text-decoration: none"
+            >
+              <button
+                style="
+                  all: unset;
+                  padding: 10px 20px;
+                  background-color: magenta;
+                  color: white;
+                  border: none;
+                  cursor: pointer;
+                "
+              >
                 Buy Now
               </button>
             </a>
-            
           </div>
           <div class="product">
             <img
@@ -221,14 +305,25 @@
               alt="Product 2"
             />
             <h3>HP Backlit</h3>
-            <p> Intel Core i5 12th Gen 1235U</p>
+            <p>Intel Core i5 12th Gen 1235U</p>
             <p class="price">₹45,999</p>
-            <a href="https://www.flipkart.com/hp-backlit-intel-core-i5-12th-gen-1235u-8-gb-512-gb-ssd-windows-11-home-15s-fy5002tu-thin-light-laptop/p/itm9046eaf5a4af9?pid=COMGZNSBS7Z959EW&lid=LSTCOMGZNSBS7Z959EWGCQAVA&marketplace=FLIPKART&q=laptop+under+50000&store=6bo%2Fb5g&srno=s_1_1&otracker=AS_Query_OrganicAutoSuggest_6_4_na_na_na&otracker1=AS_Query_OrganicAutoSuggest_6_4_na_na_na&fm=organic&iid=en_0ubLnECVdSoRtxNufAQnnyE4ag8gxqGBb8jisTedIicXgoawnmGzO9i6ZQxYfQo-D7W5efYaok_9mfamrx7unvUFjCTyOHoHZs-Z5_PS_w0%3D&ppt=clp&ppn=big-billion-day-store&ssid=h3cg50fjz40000001727554423419&qH=0dcf8ef26a0d0e48" style="text-decoration: none;">
-              <button style="all: unset; padding: 10px 20px; background-color:magenta; color: white; border: none; cursor: pointer;">
+            <a
+              href="https://www.flipkart.com/hp-backlit-intel-core-i5-12th-gen-1235u-8-gb-512-gb-ssd-windows-11-home-15s-fy5002tu-thin-light-laptop/p/itm9046eaf5a4af9?pid=COMGZNSBS7Z959EW&lid=LSTCOMGZNSBS7Z959EWGCQAVA&marketplace=FLIPKART&q=laptop+under+50000&store=6bo%2Fb5g&srno=s_1_1&otracker=AS_Query_OrganicAutoSuggest_6_4_na_na_na&otracker1=AS_Query_OrganicAutoSuggest_6_4_na_na_na&fm=organic&iid=en_0ubLnECVdSoRtxNufAQnnyE4ag8gxqGBb8jisTedIicXgoawnmGzO9i6ZQxYfQo-D7W5efYaok_9mfamrx7unvUFjCTyOHoHZs-Z5_PS_w0%3D&ppt=clp&ppn=big-billion-day-store&ssid=h3cg50fjz40000001727554423419&qH=0dcf8ef26a0d0e48"
+              style="text-decoration: none"
+            >
+              <button
+                style="
+                  all: unset;
+                  padding: 10px 20px;
+                  background-color: magenta;
+                  color: white;
+                  border: none;
+                  cursor: pointer;
+                "
+              >
                 Buy Now
               </button>
             </a>
-            
           </div>
           <div class="product">
             <img
@@ -238,18 +333,29 @@
             <h3>boAt Nirvanaa</h3>
             <p>751 ANC Hybrid Active Noise Cancellation Bluetooth</p>
             <p class="price">₹2,798</p>
-            <a href="https://www.flipkart.com/boat-nirvanaa-751-anc-hybrid-active-noise-cancellation-bluetooth/p/itm39a2296d57eea?pid=ACCG9AC9GAHPA3GV&lid=LSTACCG9AC9GAHPA3GVYRJGTV&marketplace=FLIPKART&q=headphones+boat&store=0pm%2Ffcn&srno=s_1_18&otracker=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_na&fm=search-autosuggest&iid=en_g1aq8VgtSq_ZD2OPF5RCAVHcWlFtbtOm-x0B2RRVv7qzS6GVQjxug14UtJxz7mDmW5XFHZsYp5Cc-_RrvSUNWoE8waCTrWcncKeK_ydPfoM%3D&ppt=sp&ppn=sp&ssid=gyxghg3eds0000001727554629697&qH=e9698ba16f3a3269" style="text-decoration: none;">
-              <button style="all: unset; padding: 10px 20px; background-color:magenta; color: white; border: none; cursor: pointer;">
+            <a
+              href="https://www.flipkart.com/boat-nirvanaa-751-anc-hybrid-active-noise-cancellation-bluetooth/p/itm39a2296d57eea?pid=ACCG9AC9GAHPA3GV&lid=LSTACCG9AC9GAHPA3GVYRJGTV&marketplace=FLIPKART&q=headphones+boat&store=0pm%2Ffcn&srno=s_1_18&otracker=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_na&fm=search-autosuggest&iid=en_g1aq8VgtSq_ZD2OPF5RCAVHcWlFtbtOm-x0B2RRVv7qzS6GVQjxug14UtJxz7mDmW5XFHZsYp5Cc-_RrvSUNWoE8waCTrWcncKeK_ydPfoM%3D&ppt=sp&ppn=sp&ssid=gyxghg3eds0000001727554629697&qH=e9698ba16f3a3269"
+              style="text-decoration: none"
+            >
+              <button
+                style="
+                  all: unset;
+                  padding: 10px 20px;
+                  background-color: magenta;
+                  color: white;
+                  border: none;
+                  cursor: pointer;
+                "
+              >
                 Buy Now
               </button>
             </a>
-            
           </div>
         </div>
       </div>
 
       <!-- Product Category 2 -->
-      <div class="product-category">
+      <div class="product-category"></div>
         <h2 style="text-align: center;">Latest in Fashion</h2>
         <div class="products">
           <div class="product">
@@ -301,10 +407,9 @@
       </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Modified Footer -->
     <footer>
       <p>&copy; 2024 Flipkart By Mr.Aryan Gupta. All Rights Reserved.</p>
     </footer>
-    </a>
   </body>
 </html>
