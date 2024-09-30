@@ -14,12 +14,20 @@ loginForm.addEventListener('submit', function (e) {
   } else if (username !== 'admin' || password !== 'password') {
     showErrorMessage('Invalid username or password.');
   } else {
-    window.location.href = 'home.html'; // Redirect to a homepage or another dashboard
+    // Simulate a success login and redirect to home.html
+    loginForm.style.opacity = '0';
+    setTimeout(() => {
+      window.location.href = 'home.html'; // Redirect to a homepage or another dashboard
+    }, 500); // Delay to allow animation before redirect
   }
 });
 
-// Function to display error message
+// Function to display error message with animation
 function showErrorMessage(message) {
   errorMessage.textContent = message;
   errorMessage.style.display = 'block';
+  errorMessage.style.opacity = '0';
+  setTimeout(() => {
+    errorMessage.style.opacity = '1'; // Fade-in effect
+  }, 100);
 }
