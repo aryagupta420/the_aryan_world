@@ -1,0 +1,294 @@
+/* General animation easing */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f06, #f4b400);
+    color: #fff;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header Animation */
+.header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    animation: fadeIn 1.5s ease-in-out;
+    background: linear-gradient(135deg, #ff5722, #673ab7);
+    position: relative;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: slideUp 1s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('header-bg.jpg') no-repeat center center/cover;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+}
+
+.button-group {
+    margin-top: 30px;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+
+.button-group .btn {
+    padding: 12px 30px;
+    background-color: #f4b400;
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover Animation */
+.button-group .btn:hover {
+    background-color: #ffeb3b;
+    transform: translateY(-5px);
+}
+
+/* About Section */
+.about {
+    position: relative;
+    overflow: hidden; /* Ensure no overflow */
+    padding: 10px 10%;
+    color: #fff;
+    text-align: left; /* Align text to the left */
+}
+
+.about-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(63, 81, 181, 0.8), rgba(255, 193, 7, 0.8));
+    z-index: 1;
+    animation: pulse 10s infinite; /* Background animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.about-content {
+    position: relative; /* Ensure it sits above the background */
+    z-index: 2;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between the image and text */
+}
+
+/* Profile Section */
+.profile-image-container {
+    flex: 1; /* Take up equal space */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering the image */
+    height: 10vh; /* Full height of viewport */
+    padding: 0 5%; /* Padding to create space */
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Circular Image with Border */
+.circular-image {
+    width: 340px; /* Adjust the size as needed */
+    height: 340px;
+    border-radius: 50%; /* Circular shape */
+    border: 5px solid #f4b400; /* Yellow border */
+    object-fit: cover; /* Ensures image fits */
+    animation: slide-in-left 1.2s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Text Alignment */
+.about-text {
+    flex: 2; /* Take up more space than the image */
+    margin-left: 20px; /* Space between the image and text */
+    animation: fadeIn 1.5s ease-in-out;
+    border: 4px solid #f4b400; /* Add border to text area */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside text area */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Details List */
+.details-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 20px 0; /* Margin around the list */
+}
+
+/* Optional: Style for List Items */
+.details-list li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+/* Bold Text Style */
+.bold-text {
+    font-weight: bold;
+    color: #f4b400; /* Yellow color for highlighted text */
+}
+
+/* Animation for the sliding image */
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100px); /* Start position (off-screen left) */
+        opacity: 0; /* Fully transparent */
+    }
+    to {
+        transform: translateX(0); /* Final position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Optional: Animation for content */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 5%;
+    background: linear-gradient(135deg, #3f51b5, #1a237e);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    top: 20%;
+    left: -50px;
+    animation: moveCircle 5s linear infinite;
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.skills h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #f4b400;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Skill Bar Styles */
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.skill-bar {
+    width: 70%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    overflow: hidden;
+    height: 20px;
+    margin-left: 20px; /* Space between label and bar */
+}
+
+.skill-fill {
+    background: #f4b400;
+    height: 100%;
+    border-radius: 25px;
+    transition: width 0.5s ease-in-out; /* Smooth animation for skill fill */
+}
+
+/* Animation for moving circle background */
+@keyframes moveCircle {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(50px, 20px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #f4b400;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ffeb3b;
+}
