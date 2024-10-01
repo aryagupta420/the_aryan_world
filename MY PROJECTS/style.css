@@ -12,8 +12,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
-    animation: gradientAnimation 5s infinite alternate;
+    background: linear-gradient(45deg, #f66e4c, #f09d5e);
+    animation: gradientAnimation 0.5s infinite alternate;
   }
   
   .banner {
@@ -21,7 +21,7 @@
     text-align: center;
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    animation: bannerAnimation 2s ease-out;
+    animation: bannerAnimation 1s ease-out;
   }
   
   .banner h1 {
