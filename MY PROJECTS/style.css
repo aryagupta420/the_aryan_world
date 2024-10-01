@@ -1,0 +1,95 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    animation: gradientAnimation 5s infinite alternate;
+  }
+  
+  .banner {
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    animation: bannerAnimation 2s ease-out;
+  }
+  
+  .banner h1 {
+    color: #fff;
+    font-size: 2.5rem;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 80%;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    border: 2px solid #ff7e5f;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-15px) rotate(2deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-card p {
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff7e5f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #feb47b;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    }
+    100% {
+      background: linear-gradient(45deg, #feb47b, #ff7e5f);
+    }
+  }
+  
+  @keyframes bannerAnimation {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
