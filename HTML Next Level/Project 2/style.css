@@ -319,11 +319,11 @@ footer {
 
 .social-icon {
     margin: 0 10px;
-    color: #f4b400;
+    color: #0015ff;
     text-decoration: none;
     transition: color 0.1s;
 }
 
 .social-icon:hover {
-    color: #ffeb3b;
+    color: #6019da;
 }
