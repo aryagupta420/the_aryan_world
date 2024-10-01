@@ -14,12 +14,47 @@
     to { transform: translateX(0); opacity: 1; }
 }
 
+/* Banner Section */
+.banner {
+    background: #f4b400;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 1000;
+}
+
+.banner p {
+    margin: 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Adjust the header to account for the banner height */
+.header {
+    margin-top: 50px; /* Add margin to avoid overlap with banner */
+}
+
+/* The rest of your existing CSS goes here */
+
+
 /* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
