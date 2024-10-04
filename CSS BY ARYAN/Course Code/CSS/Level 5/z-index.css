@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    background-color: aquamarine;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+#box1{
+    position: static;
+}
+#box2{
+    position:relative;
+    top: 10px;
+    left: 60px;
+}
+#box3{
+    position: fixed;
+    right: 50px;
+}
+#box4{
+    position: absolute;
+    top: 25px;
+}

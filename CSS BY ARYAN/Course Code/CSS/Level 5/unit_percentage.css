@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  #first {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+  }
+  #second {
+    background-color: chartreuse;
+    height: 20%;
+    width: 30%;
+    text-align: center;
+  }
