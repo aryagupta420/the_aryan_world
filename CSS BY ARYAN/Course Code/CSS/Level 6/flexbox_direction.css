@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#heading{
+    text-align: center;;
+}
+.box{
+    width: 110px;
+    height: 100px;
+    border: 3px solid;
+    margin: 5px;
+}
+#container{
+    height: 115px;
+    width: 550px;
+    border: 3px solid;
+    background-color: aqua;
+
+    display: flex;
+    flex-direction:row-reverse;
+}
+#box1{background-color: red ;}
+#box2{background-color: yellow ;}
+#box3{background-color: green ;}
+#box4{background-color: orangered ;}
+#box5{background-color: khaki ;}
